@@ -1,7 +1,7 @@
 ﻿---
 sidebar_position: 8
 
-title: Installation Checklist ✅
+title: ✅ Installation Checklist
 description: Ensure you completed the installation process. 
 
 ---

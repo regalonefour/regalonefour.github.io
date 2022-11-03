@@ -9,7 +9,7 @@ description: Someone will read this, surely.
 r14-evidence early access changelong
 
 v1.32 (11/3/2022)
-    - new documentation made available at regalonefour.github.io/r14documentation/
+    - new documentation made available at regalonefour.github.io/
     - made slight change to the evidence pickup thread to prevent an error being thrown when leaving pickup range
     - readded missing GetPlayer() function to the serverside drug testing event, drug tests should now provide evidence bags
     - added server ID to drug test notification message, you will now see the ID of the player you drug tested

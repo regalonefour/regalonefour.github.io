@@ -1,0 +1,9 @@
+{
+  "label": "Features & Information",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Features & Information"
+  },
+}
