@@ -94,143 +94,155 @@ can either search for the ```FormatItemInfo()``` function, or if you are using a
 We will want to remove this code, and then replace it with the following updated code:
 
 ```lua title='Code to be inserted into qb-inventory/html/js/app.js near Line 485' showLineNumbers
-     } else if (itemData.name == "filled_evidence_bag") {
-        $(".item-info-title").html("<p>" + itemData.label + "</p>");
-        if (itemData.info.type == "casing") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +  
-                "</span></p><p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "</span></p><p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Collected: </strong><span>" +
-                itemData.info.street +
-                "</span></p><p><strong>Caliber: </strong><span>" +
-                itemData.info.ammolabel +
-                "</span></p><p><strong>Serial Number: </strong><span>" +
-                itemData.info.serie +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-        } else if (itemData.info.type == "blood") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "</span></p><p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Collected: </strong><span>" +
-                itemData.info.street +
-                "</span></p><p><strong>Blood Type: </strong><span>" +
-                itemData.info.bloodtype +
-                "</span></p><p><strong>DNA Code: </strong><span>" +
-                itemData.info.dnalabel +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-        } else if (itemData.info.type == "fingerprint") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "<p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Collected: </strong><span>" +
-                itemData.info.street +
-                "</span></p><p><strong>Fingerprint: </strong><span>" +
-                itemData.info.fingerprint +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-        } else if (itemData.info.type == "fragment") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "</span></p><p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Collected: </strong><span>" +
-                itemData.info.street +
-                "</span></p><p><strong>Vehicle: </strong><span>" +
-                itemData.info.vehname +
-                "</span></p><p><strong>Color: </strong><span>" +
-                itemData.info.vehcolor +
-                "</span></p><p><strong>VIN Match: </strong><span>" +
-                itemData.info.plate +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-        } else if (itemData.info.type == "gsr") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "</span></p><p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Conducted: </strong><span>" +
-                itemData.info.street +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-        } else if (itemData.info.type == "bac") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "</span></p><p><strong>Result: </strong><span>" +
-                itemData.info.result +
-                "<p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Conducted: </strong><span>" +
-                itemData.info.street +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-
-        } else if (itemData.info.type == "drugtest") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Conducted: </strong><span>" +
-                itemData.info.street +
-                "</span></p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking + "<br /><p>" +
-                itemData.info.result + "</p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-
-        } else if (itemData.info.type == "dna") {
-            $(".item-info-description").html(
-                "<p><strong>Type: </strong><span>" +
-                itemData.info.label +
-                "</span></p><strong>Tracking ID: </strong><span>" +
-                itemData.info.tracking +
-                "</span></p><p><strong>DNA Code: </strong><span>" +
-                itemData.info.dnalabel +
-                "<p><strong>Date: </strong><span>" +
-                itemData.info.date +
-                "</span></p><p><strong>Conducted: </strong><span>" +
-                itemData.info.street +
-                "</span></p><br /><p>" +
-                itemData.description +
-                "</p>"
-            );
-        }
+    } else if (itemData.name == "filled_evidence_bag") {
+    $(".item-info-title").html("<p>" + itemData.label + "</p>");
+    if (itemData.info.type == "casing") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +  
+            "</span></p><p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "</span></p><p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Collected: </strong><span>" +
+            itemData.info.street +
+            "</span></p><p><strong>Caliber: </strong><span>" +
+            itemData.info.ammolabel +
+            "</span></p><p><strong>Serial Number: </strong><span>" +
+            itemData.info.serie +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "blood") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "</span></p><p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Collected: </strong><span>" +
+            itemData.info.street +
+            "</span></p><p><strong>Blood Type: </strong><span>" +
+            itemData.info.bloodtype +
+            "</span></p><p><strong>DNA Code: </strong><span>" +
+            itemData.info.dnalabel +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "fingerprint") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "<p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Collected: </strong><span>" +
+            itemData.info.street +
+            "</span></p><p><strong>Fingerprint: </strong><span>" +
+            itemData.info.fingerprint +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "fragment") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "</span></p><p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Collected: </strong><span>" +
+            itemData.info.street +
+            "</span></p><p><strong>Vehicle: </strong><span>" +
+            itemData.info.vehname +
+            "</span></p><p><strong>Color: </strong><span>" +
+            itemData.info.vehcolor +
+            "</span></p><p><strong>VIN Match: </strong><span>" +
+            itemData.info.plate +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "gsr") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "</span></p><p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Conducted: </strong><span>" +
+            itemData.info.street +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "bac") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "</span></p><p><strong>Result: </strong><span>" +
+            itemData.info.result +
+            "<p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Conducted: </strong><span>" +
+            itemData.info.street +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "drugtest") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Conducted: </strong><span>" +
+            itemData.info.street +
+            "</span></p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking + "<br /><p>" +
+            itemData.info.result + "</p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "item") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Recovered: </strong><span>" +
+            itemData.info.street +
+            "</span></p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking + "<br /><p>" +
+            itemData.info.iteminfo + "</p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    } else if (itemData.info.type == "dna") {
+        $(".item-info-description").html(
+            "<p><strong>Type: </strong><span>" +
+            itemData.info.label +
+            "</span></p><strong>Tracking ID: </strong><span>" +
+            itemData.info.tracking +
+            "</span></p><p><strong>DNA Code: </strong><span>" +
+            itemData.info.dnalabel +
+            "<p><strong>Date: </strong><span>" +
+            itemData.info.date +
+            "</span></p><p><strong>Conducted: </strong><span>" +
+            itemData.info.street +
+            "</span></p><br /><p>" +
+            itemData.description +
+            "</p>"
+        );
+    }
 ```
 
 We can now continue with the installation process, our items should now all have images, and evidence
