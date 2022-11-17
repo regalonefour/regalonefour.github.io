@@ -26,6 +26,13 @@ to police even if they fly in after the effect was applied.
 
 ![Results of investigate person.](/img/investigateperson.png)
 
+### Frisk
+
+Want to escalate a traffic stop into a raid? Obtain probable cause for a search? Maybe you're just trying to make sure the head of
+CID just doesn't get hacked to death in the middle of a courtcase? No longer do you have to search people to attempt and ascertain
+whether or not they have weapons on their person, with r14-evidence you can now quickly and easily perform a Terry frisk of a person
+of interest and determine wehther or not they are carrying a weapon or something suspicious. 
+
 ### GSR Field Test
 
 In r14-evidence, in additon to the gunpowder status effect that most police officers are used to from qb-policejob, officers have
