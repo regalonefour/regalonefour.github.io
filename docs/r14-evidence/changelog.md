@@ -8,6 +8,37 @@ description: Someone will read this, surely.
 
 r14-evidence early access changelong
 
+    - /bagevidence will now validate that a weapon has a serial and durability to prevent potential errors
+    - when triggering SetCurrentWeapon, evidence will now send an empty table, and the script itself will check for an empty table instead of a boolean
+    - camera channels can now have a job name or job type specified instead of a authorized job function
+    - added weazel news camera channel for the base qb-core reporter job
+    - added guide to creating custom camera channels to config
+
+v1.4 (11/16/2022)
+    - added data validation when creating the vehicle hash lookup table to prevent script breaking on startup if a hash is missing
+    - casing evidence will be generated more realistically by simulating a real casing in game 
+    - new casing simulation means casings will not generate through walls or fall into the void
+    - added debug variable to view casing objects generated to observe shell casing generation/behavior
+    - police can now use /bagev or /bagevidence to place weapons in their inventory into an evidence bag
+    - when using evidence bags containing a weapon, you will be shown the serial, ammo loaded, and durability along with option to unbag it
+    - unbagging a weapon will take 60 seconds and civilians will be prompted to confirm they are not exploiting
+    - added server print and qb-logs trigger to record when civlians unbag evidence weapon bags
+    - server will no longer send blank evidence packages to the client
+    - update to authorized job functions to work serverside, /clearevidence should be available again
+    - added device settings menu to camera, accessible by using E while using the camera
+    - added ability to change upload channels from the device settings
+    - added sd card item, cameras will come with an ejectable SD card by default
+    - cameras will now store their photos on their currently inserted SD card, unless connected to an upload channel
+    - using an SD card will allow you to name it, or insert it if you are using the camera
+    - upload channels can be assigned a password from the config to prevent unauthorized users from uploading images
+    - holding shift when using the camera item will open the device menu without pulling out the camera
+    - using the camera item now while holding a weapon should properly disarm you and open the camera
+    - exiting the camera should now no longer 'drop you' through some objects (like AC units)
+    - added flash for the evidence camera, enable/disable with F
+    - camera item will now block subsequent usage until the player has pulled out the camera, preventing accidentally pressing it twice cancelling use
+    - camera position updated to more accurately represent the position of the camera lens rather than appearing above the player
+    - players can access upload channels via the camera, and view all photos uploaded to them from the current reset
+
 v1.32 (11/3/2022)
     - new documentation made available at regalonefour.github.io/
     - made slight change to the evidence pickup thread to prevent an error being thrown when leaving pickup range
@@ -15,6 +46,7 @@ v1.32 (11/3/2022)
     - added server ID to drug test notification message, you will now see the ID of the player you drug tested
     - added ability for police to fingerprint players via qb-target
     - added fingerprint reader item added for qb-target option
+    - drug test evidence bags will now include the DNA of the suspect tested, and can be copy/pasted from the evidence bag menu
 
 v1.31 (10/31/2022)
     - fixed a native function that was causing massive performance degredation, updated native should restore normal resmon values (~1.4ms while using camera in evidence dense areas)

@@ -28,9 +28,26 @@ and civlians when nothing is going on! A lot of work has gone into making sure t
 players, and unless you are a police officer actively investigating a scene, expect resmon values to rarely exceed those of
 qb-policejob. 
 
+## Ease of Integration
+
+Entirely open source, and highly configurable, r14-evidence is intended to be as easy as possible to integrate with your existing
+resoruces in order to work with your server not against it. Custom chat scripts, custom notifications systems, custom police alerts
+different police job names, different job types? No problem! In the config you will find options for customizing key functions and
+making sure r14-evidence fits your server and your resources, not the other way around.
+
+![Configurable job checking functions that fit whatever exists on your server!](/img/authjobs.png)
+
+## Routing Bucket Support
+
+Support for entity routing buckets is built in to r14-evidence to ensure compatability with any scripts or resources that you are
+using which instance players! By default any evidence that is not attached to a networked entity is automatically assigned to the
+routing bucket the player is in at the time it is created, with entity-attached evidence automatically being filtered through the
+native functionality of routing buckets. You don't need to worry about your apartments becoming a mess of casings, blood, and
+anything else, r14-evidence out of the box makes sure your cops only find evidence where they are supposed to!
+
 ## Minimized Server Traffic
 
 Despite having more evidence available for your officers, expect less client to server and conversely server to client traffic
 with r14-evidence thanks to a packeting system for evidence creation and syncing. Rather than sending every single casing, impact
 blood drop, or fingerprint across the network in the moment it is created, the script automatically packages evidence creation
-and evidence syncing events together and sends them only once per second to reduce your network traffic.
+from the player and evidence syncing from the server once per second to reduce your network traffic.

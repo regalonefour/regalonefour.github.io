@@ -3,9 +3,12 @@
     "",
     "\\docs",
     "\\docs\\r14-evidence",
-    "\\docs\\r14-evidence\\Included Features",
+    "\\docs\\r14-evidence\\Features & Information",
     "\\docs\\r14-evidence\\Installation",
-    "\\docs\\r14-evidence\\Setting Up Subsystems"
+    "\\docs\\r14-evidence\\Setting Up Subsystems",
+    "\\docs\\r14-objects",
+    "\\docs\\r14-rx",
+    "\\docs\\r14-smallresources"
   ],
   "SelectedNode": "\\docs\\r14-evidence\\Installation\\qbcore.md",
   "PreviewInSolutionExplorer": false

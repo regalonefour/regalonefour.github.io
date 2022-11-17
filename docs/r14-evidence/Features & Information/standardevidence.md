@@ -12,7 +12,9 @@ During their time in server, players will generate evidence drop via several bui
 r14-evidence and various qb-core resources. Police are able to discover this evidence by investgiating
 with either a flashlight or the included camera that comes included with the resource. They are then able to
 collect this evidence by using the flashlight and an empty evidence bag. Currently, there are six evidence drops
-included with r14-evidence, with four being able to be collected in evidence bags.
+included with r14-evidence, with four being able to be collected in evidence bags. Additionally, as of v1.4, police
+can bag fiearms and melee weapons into evidence when they are recovered while on patrol or when conducting an
+investigation.
 
 
 ## Casings
@@ -76,4 +78,17 @@ the general type of weapon that fired it, and the angle of impact which roughly 
 was fired from. When a bullet strikes a ped or a player, it will not generate angle of impact evidence, but
 show where the bullet struck them and indicate that there is a wound.
 
-![Lock tamperings seen through the evidence camera](/img/impacts.png)
+![Lock tamperings seen through the evidence camera](/img/locktamperings.png)
+
+## Weapons
+
+When ever your police come into possession of firearms or melee weapons either by recovering them from a
+crime scene, seizing them from a suspect, or holding them as part of an investigation, they can now properly
+bag them and log them into evidence just like any other piece of physical evidence in r14-evidence. By using
+the built in /evidencebag and /evbag commands, police can bag the weapon retaining information like the serial
+number and durability of a firearm while also gaining the ability to copy it directly in game and create notes
+through the evidence bag menu!
+
+![/bagevidence can be used to bag any weapon in your inventory](/img/bagev.png)
+
+![Weapon evidence bag information](/img/weaponbag.png)
