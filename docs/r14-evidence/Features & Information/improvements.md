@@ -8,7 +8,7 @@ description: A look at what evidence does better than qb-policejob.
 
 ### Nikoff G900 DSLR
 
-Including in r14-evidence is one of the most important tools in the arsenal of your police force, the Nikoff G900 DSLR
+Included in r14-evidence is one of the most important tools in the arsenal of your police force, the Nikoff G900 DSLR
 camera which allows for automatic uploading of photos to both the public Nikoff Image Space sharing service, as well as
 secure options for your server's emergency services and even private businesses. In addition to serving as an effective
 tool for documenting and observing the world your players inhabit, the Nikoff G900 camera allows your officers to document
