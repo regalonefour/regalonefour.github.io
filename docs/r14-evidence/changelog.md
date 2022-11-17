@@ -8,6 +8,7 @@ description: Someone will read this, surely.
 
 r14-evidence early access changelong
 
+v1.41 (11/17/2022)
     - /bagevidence will now validate that a weapon has a serial and durability to prevent potential errors
     - when triggering SetCurrentWeapon, evidence will now send an empty table, and the script itself will check for an empty table instead of a boolean
     - camera channels can now have a job name or job type specified instead of a authorized job function
